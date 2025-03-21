@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Family Memories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        /* Animated Family Name */
+        .family-title {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #570606, #014541, #220665, #2d4504);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientFlow 8s ease infinite;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(11, 94, 117, 0.1);
+            margin: 2rem 0;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+
+        /* Simplified Photo Effects */
+        .photo-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 1rem;
+            transition: all 0.4s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Remove caption styles since we're not using them anymore */
+        .photo-caption {
+            display: none;
+        }
+
+        /* Section Enhancements */
+        .memory-section {
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .memory-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .memory-section:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Section Title Animations */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transition: width 0.4s ease;
+        }
+
+        .section-title:hover::after {
+            width: 100%;
+        }
+        .subtitle{
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: rgb(35, 7, 82);
+            margin-bottom: 2rem;
+        }
+
+        /* Keep the section background colors */
+        #eid { background-color: #0a0117; }
+        #tour { background-color: #099cb6; }
+        #gossip { background-color: #430820; }
+        #functions { background-color: #570a04; }
+        #muttaqi { background-color: #063136; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="family-title">BHUIYAN Family</h1>
+        <p class="subtitle">A Collection of Precious Memories</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#eid">Eid Celebrations</a></li>
+            <li><a href="#tour">Family Tours</a></li>
+            <li><a href="#gossip">Fun Moments</a></li>
+            <li><a href="#functions">Family Functions</a></li>
+            <li><a href="#muttaqi">Muttaqi</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section id="eid" class="memory-section">
+            <h2>Eid Celebrations</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/15.jpg" alt="Eid Celebration 2023">
+                    <p class="photo-caption">Eid-ul-Fitr 2023 - Family Gathering</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/9.jpg" alt="Eid Celebration 2022">
+                    <p class="photo-caption">Eid-ul-Adha 2022 - Morning Prayer</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/14.jpg" alt="Eid Lunch">
+                    <p class="photo-caption">Special Eid Lunch Together</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/11.jpg" alt="Eid Gifts">
+                    <p class="photo-caption">Exchanging Eid Gifts</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/13.jpg" alt="Eid Evening">
+                    <p class="photo-caption">Evening Get-together</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/2.jpg" alt="Eid Evening">
+                    <p class="photo-caption">Evening Get-together</p>
+                </div>
+              
+            </div>
+        </section>
+
+        <section id="tour" class="memory-section">
+            <h2>Family Tours</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/1.jpg" alt="Beach Vacation">
+                    <p class="photo-caption">Summer Beach Trip 2023</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/33.jpg" alt="Mountain Trip">
+                    <p class="photo-caption">Mountain Adventure 2022</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/34.jpg" alt="City Tour">
+                    <p class="photo-caption">City Exploration</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/35.jpg" alt="Camping">
+                    <p class="photo-caption">Family Camping Trip</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/36.jpg" alt="Park Visit">
+                    <p class="photo-caption">Weekend Park Visit</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/37.jpg" alt="Park Visit">
+                    <p class="photo-caption">Weekend Park Visit</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gossip" class="memory-section">
+            <h2>Fun Moments</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/43.jpg" alt="Game Night">
+                    <p class="photo-caption">Family Game Night</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/40.jpg" alt="Birthday Party">
+                    <p class="photo-caption">Surprise Birthday Celebration</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/42.jpg" alt="Cooking Together">
+                    <p class="photo-caption">Cooking Fun</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/8.jpg" alt="Garden Time">
+                    <p class="photo-caption">Gardening Together</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/16.jpg" alt="Movie Night">
+                    <p class="photo-caption">Family Movie Night</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/7.jpg" alt="Movie Night">
+                    <p class="photo-caption">Family Movie Night</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="functions" class="memory-section">
+            <h2>Family Functions</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/12.jpg" alt="Wedding">
+                    <p class="photo-caption">Family Wedding</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/17.jpg" alt="Anniversary">
+                    <p class="photo-caption">25th Anniversary Celebration</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/18.jpg" alt="Graduation">
+                    <p class="photo-caption">Graduation Ceremony</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/26.jpg" alt="Family Reunion">
+                    <p class="photo-caption">Annual Family Reunion</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/28.jpg" alt="House Warming">
+                    <p class="photo-caption">New House Celebration</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/32.jpg" alt="House Warming">
+                    <p class="photo-caption">New House Celebration</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="muttaqi" class="memory-section">
+            <h2>Muttaqi</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/38.jpg" alt="Muttaqi Birthday">
+                    <p class="photo-caption">Muttaqi's Birthday</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/39.jpg" alt="Muttaqi Playing">
+                    <p class="photo-caption">Playtime Fun</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/41.jpg" alt="Muttaqi School">
+                    <p class="photo-caption">First Day at School</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/44.jpg" alt="Muttaqi Holiday">
+                    <p class="photo-caption">Holiday Adventures</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/45.jpg" alt="Muttaqi Holiday">
+                    <p class="photo-caption">Holiday Adventures</p>
+                </div>
+                <div class="photo-card">
+                    <img src="images/46.jpg" alt="Muttaqi Holiday">
+                    <p class="photo-caption">Holiday Adventures</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ By Azhar Uddin</p>
+    </footer>
+</body>
+</html>
